@@ -1,10 +1,7 @@
 package testpersonal.pom_selenium_01;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Properties;
-
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,16 +12,13 @@ public class DriverManager {
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
 	public static void setDriver() {
-		Properties prop = new Properties();
-
+		String browser = null;
 		try {
-			prop.load(new FileInputStream("./src/test/resources/data.properties"));
+			browser = System.getProperty("browser") != null ? System.getProperty("browser"): PropertiesManager.getProperty("browser");
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		String browser = System.getProperty("browser") != null ? System.getProperty("browser"): prop.getProperty("browser");
-		prop.clear();
 		WebDriver dr = switch (browser) {
 		case "chrome" -> new ChromeDriver();
 		case "firefox" -> new FirefoxDriver();
