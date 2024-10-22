@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Login Tests">
-  <test name="Login error and success check">
+<suite  parallel="methods"  name="Login Tests">
+  <test thread-count="2" name="Login error and success check">
     <classes>
       <class name="testpersonal.pom_selenium_01.LoginTests"/>
     </classes>
