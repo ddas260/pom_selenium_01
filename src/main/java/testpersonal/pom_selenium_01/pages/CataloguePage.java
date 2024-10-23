@@ -1,4 +1,4 @@
-package testpersonal.pom_selenium_01;
+package testpersonal.pom_selenium_01.pages;
 
 import java.util.List;
 
@@ -8,7 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CataloguePage extends PomCommons {
+import testpersonal.pom_selenium_01.base.PageUtils;
+
+public class CataloguePage extends PageUtils {
 	private WebDriver driver;
 
 	public CataloguePage(WebDriver driver) {

@@ -1,4 +1,4 @@
-package testpersonal.pom_selenium_01;
+package testpersonal.pom_selenium_01.utils;
 
 import java.util.Objects;
 import java.util.Properties;
@@ -11,7 +11,7 @@ public class PropertiesManager {
 	public static String getProperty(String key) throws FileNotFoundException, IOException {
 		if(Objects.isNull(properties)) {
 			properties = new Properties();
-			properties.load(new FileInputStream("./src/test/resources/data.properties"));
+			properties.load(new FileInputStream("./src/main/java/testpersonal/pom_selenium_01/config/config.properties"));
 		}
 		return properties.getProperty(key);	
 	}

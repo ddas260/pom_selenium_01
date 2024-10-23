@@ -1,4 +1,4 @@
-package testpersonal.pom_selenium_01;
+package testpersonal.pom_selenium_01.base;
 
 import java.time.Duration;
 import java.util.List;
@@ -9,9 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class PomCommons {
+public class PageUtils {
 	private WebDriver driver;
-	public PomCommons(WebDriver driver) {
+	public PageUtils(WebDriver driver) {
 		this.driver = driver;
 	}
 	public void waitForElementVisibility(WebElement ele) throws TimeoutException {

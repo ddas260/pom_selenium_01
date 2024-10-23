@@ -3,6 +3,10 @@ package testpersonal.pom_selenium_01;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import testpersonal.pom_selenium_01.pages.CataloguePage;
+import testpersonal.pom_selenium_01.pages.LoginPage;
+import testpersonal.pom_selenium_01.utils.DriverManager;
+
 public class LoginTests extends BaseTest{
 	@Test
 	public void successfulLoginTest() {

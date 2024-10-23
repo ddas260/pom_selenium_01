@@ -1,25 +1,23 @@
 package testpersonal.pom_selenium_01;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+
+import testpersonal.pom_selenium_01.utils.DriverManager;
+import testpersonal.pom_selenium_01.utils.PropertiesManager;
 
 public class BaseTest {
 	@BeforeMethod
 	public void launchApp() {
-		Properties prop = new Properties();
+		String baseUrl=null;
 		try {
-			prop.load(new FileInputStream("./src/test/resources/data.properties"));
+			baseUrl = PropertiesManager.getProperty("baseUrl");
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String baseUrl = prop.getProperty("baseUrl");
-		prop.clear();
 		DriverManager.getDriver().get(baseUrl);
 	}
 

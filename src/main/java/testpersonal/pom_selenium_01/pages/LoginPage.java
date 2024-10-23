@@ -1,11 +1,13 @@
-package testpersonal.pom_selenium_01;
+package testpersonal.pom_selenium_01.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends PomCommons {
+import testpersonal.pom_selenium_01.base.PageUtils;
+
+public class LoginPage extends PageUtils {
 	private WebDriver driver;
 
 	public LoginPage(WebDriver driver) {

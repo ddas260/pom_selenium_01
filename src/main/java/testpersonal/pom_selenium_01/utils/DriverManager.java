@@ -1,11 +1,9 @@
-package testpersonal.pom_selenium_01;
+package testpersonal.pom_selenium_01.utils;
 
 import java.io.IOException;
 import java.time.Duration;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverManager {
 
@@ -16,15 +14,9 @@ public class DriverManager {
 		try {
 			browser = System.getProperty("browser") != null ? System.getProperty("browser"): PropertiesManager.getProperty("browser");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		WebDriver dr = switch (browser) {
-		case "chrome" -> new ChromeDriver();
-		case "firefox" -> new FirefoxDriver();
-		default -> throw new IllegalArgumentException("Unexpected value: " + browser);
-		};
-		driver.set(dr);
+		driver.set(BrowserObjects.getBrowser(browser));
 		driver.get().manage().window().setSize(new Dimension(1440, 900));
 		driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
