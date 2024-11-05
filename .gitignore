@@ -93,6 +93,7 @@ local.properties
 
 # Annotation Processing
 .apt_generated
+.apt_generated_tests
 
 .sts4-cache/
 
@@ -212,3 +213,7 @@ README.html
 *.iml
 .idea
 .exercism
+
+### Specific data examples ###
+src/main/resources/*
+!src/main/resources/exampleUserData.json

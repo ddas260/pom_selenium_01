@@ -9,19 +9,18 @@ import testpersonal.pom_selenium_01.utils.DriverManager;
 import testpersonal.pom_selenium_01.utils.PropertiesManager;
 
 public class BaseTest {
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void launchApp() {
 		String baseUrl=null;
 		try {
 			baseUrl = PropertiesManager.getProperty("baseUrl");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		DriverManager.getDriver().get(baseUrl);
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void closeApp() {
 		DriverManager.quitDriver();
 		
