@@ -1,4 +1,4 @@
-package testpersonal.pom_selenium_01;
+package testpersonal.pom_selenium_01.base;
 
 import java.io.IOException;
 

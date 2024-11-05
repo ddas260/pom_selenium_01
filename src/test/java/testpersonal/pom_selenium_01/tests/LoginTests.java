@@ -1,4 +1,4 @@
-package testpersonal.pom_selenium_01;
+package testpersonal.pom_selenium_01.tests;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +11,7 @@ import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import testpersonal.pom_selenium_01.base.BaseTest;
 import testpersonal.pom_selenium_01.pages.CataloguePage;
 import testpersonal.pom_selenium_01.pages.LoginPage;
 import testpersonal.pom_selenium_01.utils.DriverManager;

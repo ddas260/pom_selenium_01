@@ -8,7 +8,7 @@
   </run>
   </groups>
     <classes>
-      <class name="testpersonal.pom_selenium_01.LoginTests"/>
+      <class name="testpersonal.pom_selenium_01.tests.LoginTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
