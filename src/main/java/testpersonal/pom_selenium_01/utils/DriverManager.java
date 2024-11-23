@@ -16,7 +16,7 @@ public class DriverManager {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		driver.set(BrowserObjects.getBrowser(browser));
+		driver.set(BrowserManager.getBrowser(browser));
 		driver.get().manage().window().setSize(new Dimension(1440, 900));
 		driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}

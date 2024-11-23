@@ -215,5 +215,5 @@ README.html
 .exercism
 
 ### Specific data examples ###
-src/main/resources/*
-!src/main/resources/exampleUserData.json
+src/test/resources/*
+!src/test/resources/exampleUserData.json

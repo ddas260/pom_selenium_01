@@ -1,4 +1,4 @@
-package testpersonal.pom_selenium_01.utils.json_reader;
+package testpersonal.pom_selenium_01.utils.json_reader.user_data_objects;
 
 import java.util.List;
 
@@ -7,10 +7,6 @@ public class UserData {
 
 	public List<User> getUsers() {
 		return users;
-	}
-
-	public void setUsers(List<User> users) {
-		this.users = users;
 	}
 
 }

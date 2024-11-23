@@ -11,19 +11,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageUtils {
 	private WebDriver driver;
+
 	public PageUtils(WebDriver driver) {
 		this.driver = driver;
 	}
+
 	public void waitForElementVisibility(WebElement ele) throws TimeoutException {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(ele));
 	}
+
 	public void waitForAllElementsVisibility(List<WebElement> ele) throws TimeoutException {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfAllElements(ele));
 	}
+
 	public void waitForElementInvisibility(WebElement ele) throws TimeoutException {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.invisibilityOf(ele));
 	}
 
